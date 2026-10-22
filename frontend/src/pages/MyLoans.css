@@ -1,0 +1,92 @@
+.loans-layout { padding: 48px 0 80px; display: grid; grid-template-columns: 1fr 300px; gap: 40px; }
+
+.loan-tabs { display: flex; gap: 4px; border-bottom: 2px solid var(--parchment); margin-bottom: 28px; }
+.loan-tab {
+    font-family: var(--font-ui); font-size: 0.88rem; font-weight: 500;
+    padding: 10px 18px; background: none; border: none; cursor: pointer; color: var(--dust);
+    border-bottom: 2px solid transparent; margin-bottom: -2px;
+    transition: color var(--transition), border-color var(--transition);
+    display: flex; align-items: center; gap: 8px;
+}
+.loan-tab .tab-count {
+    font-size: 0.72rem; background: var(--parchment); color: var(--dust);
+    padding: 1px 7px; border-radius: 99px;
+}
+.loan-tab.active { color: var(--amber-dark); border-bottom-color: var(--amber); }
+.loan-tab.active .tab-count { background: rgba(200, 131, 42, 0.15); color: var(--amber-dark); }
+
+.loan-card {
+    background: var(--cream); border: 1px solid var(--parchment);
+    border-radius: var(--radius-md); padding: 20px;
+    display: flex; gap: 20px; align-items: flex-start; margin-bottom: 16px;
+    transition: box-shadow var(--transition);
+}
+.loan-card:hover { box-shadow: var(--shadow-md); }
+.loan-card.overdue { border-left: 4px solid var(--rust); }
+.loan-card.returned { opacity: 0.7; }
+
+.loan-cover {
+    width: 60px; height: 80px;
+    background: linear-gradient(135deg, var(--parchment), #d8cdb0);
+    border-radius: 3px; display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; flex-shrink: 0;
+}
+.loan-body { flex: 1; min-width: 0; }
+.loan-body .book-card-category { display: block; margin-bottom: 3px; }
+.loan-body h3 {
+    font-size: 1rem; color: var(--bark); margin-bottom: 2px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.loan-body .author { font-family: var(--font-ui); font-size: 0.82rem; color: var(--dust); margin-bottom: 10px; }
+.loan-dates { display: flex; gap: 20px; flex-wrap: wrap; }
+.loan-date { font-family: var(--font-ui); font-size: 0.78rem; }
+.loan-date .date-label { color: var(--dust); display: block; }
+.loan-date .date-value { color: var(--bark); font-weight: 500; }
+.loan-date.overdue-date .date-value { color: var(--rust); }
+.loan-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex-shrink: 0; }
+.due-soon-pill {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500;
+    background: rgba(200, 131, 42, 0.12); color: var(--amber-dark);
+    padding: 3px 10px; border-radius: 99px; border: 1px solid rgba(200, 131, 42, 0.25);
+}
+
+.loan-summary-card {
+    background: var(--cream); border: 1px solid var(--parchment);
+    border-radius: var(--radius-md); overflow: hidden;
+    position: sticky; top: calc(var(--nav-height) + 24px);
+}
+.loan-summary-header { background: var(--bark); padding: 16px 20px; }
+.loan-summary-header h3 { color: var(--amber-light); font-size: 0.95rem; font-style: italic; }
+.loan-summary-body { padding: 20px; }
+.summary-stat {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 0; border-bottom: 1px solid var(--parchment);
+    font-family: var(--font-ui); font-size: 0.85rem;
+}
+.summary-stat:last-child { border-bottom: none; }
+.summary-stat .s-label { color: var(--dust); }
+.summary-stat .s-value { color: var(--bark); font-weight: 600; }
+.summary-stat .s-value.overdue { color: var(--rust); }
+.renewal-note {
+    background: rgba(200, 131, 42, 0.08); border: 1px solid rgba(200, 131, 42, 0.2);
+    border-radius: var(--radius-sm); padding: 12px;
+    font-family: var(--font-ui); font-size: 0.8rem; color: var(--bark-light);
+    line-height: 1.5; margin-top: 16px;
+}
+
+.loans-loading { text-align: center; padding: 48px 24px; font-family: var(--font-ui); color: var(--dust); }
+.loans-loading .spinner {
+    width: 32px; height: 32px; border: 3px solid var(--parchment); border-top-color: var(--amber);
+    border-radius: 50%; animation: loans-spin 0.8s linear infinite; margin: 0 auto 16px;
+}
+@keyframes loans-spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 900px) {
+    .loans-layout { grid-template-columns: 1fr; }
+    .loan-summary-card { position: static; }
+}
+@media (max-width: 640px) {
+    .loan-card { flex-direction: column; }
+    .loan-actions { flex-direction: row; align-items: flex-start; }
+}

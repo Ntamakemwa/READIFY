@@ -1,0 +1,19 @@
+# Environment secrets — never commit this
+.env
+
+# Maven build output
+target/
+*.class
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# H2 database files
+*.mv.db
+*.trace.db
+
+# Logs
+*.log
+logs/
