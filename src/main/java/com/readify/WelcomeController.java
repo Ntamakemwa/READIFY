@@ -11,7 +11,7 @@ import java.util.Map;
 @RestController
 public class WelcomeController extends BaseController {
 
-    @GetMapping("/")
+    @GetMapping("/api")
     public ResponseEntity<Map<String, Object>> welcome() {
         return ResponseEntity.ok(Map.of(
                 "message", "Welcome to Readify - Secure Library Management System API",
