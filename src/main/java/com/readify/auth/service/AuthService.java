@@ -3,6 +3,7 @@ package com.readify.auth.service;
 import com.readify.auth.dto.AuthResponse;
 import com.readify.auth.dto.LoginRequest;
 import com.readify.auth.dto.RegisterRequest;
+import com.readify.auth.entity.AccountType;
 import com.readify.auth.entity.User;
 import com.readify.auth.entity.UserRole;
 import com.readify.auth.repository.UserRepository;
@@ -48,7 +49,7 @@ public class AuthService {
                 .orElseThrow(() -> new ResourceNotFoundException("User", "email", authentication.getName()));
 
         String token = tokenProvider.generateToken(authentication);
-        return new AuthResponse(token, user.getEmail(), user.getRole().name());
+        return new AuthResponse(token, user.getEmail(), user.getRole().name(), user.getAccountType().name());
     }
 
     public Map<String, Object> register(@Valid RegisterRequest request) {
@@ -56,17 +57,24 @@ public class AuthService {
             throw new DuplicateResourceException("User", "email", request.getEmail());
         }
 
+        AccountType accountType = request.getAccountType() == null
+                ? AccountType.READER
+                : request.getAccountType();
+
         User user = new User();
         user.setFullName(request.getFullName());
         user.setEmail(request.getEmail());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
+        // The account type never grants admin powers: everyone starts as a plain member.
         user.setRole(UserRole.ROLE_MEMBER);
+        user.setAccountType(accountType);
 
         userRepository.save(user);
         return Map.of(
-                "message", "Member registered successfully.",
+                "message", "Account registered successfully.",
                 "email", user.getEmail(),
-                "role", user.getRole().name()
+                "role", user.getRole().name(),
+                "accountType", user.getAccountType().name()
         );
     }
 
@@ -79,7 +87,8 @@ public class AuthService {
                 "email", user.getEmail(),
                 "status", user.getStatus().name(),
                 "enabled", user.isEnabled(),
-                "role", user.getRole().name()
+                "role", user.getRole().name(),
+                "accountType", user.getAccountType().name()
         );
     }
 

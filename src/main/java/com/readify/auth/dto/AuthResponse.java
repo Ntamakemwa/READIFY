@@ -5,6 +5,7 @@ public class AuthResponse {
     private String tokenType = "Bearer";
     private String email;
     private String role;
+    private String accountType;
     private String provider;
     private boolean isNewUser;
     private boolean emailVerified;
@@ -21,8 +22,13 @@ public class AuthResponse {
         this.message = "Authentication successful";
     }
 
-    public AuthResponse(String token, String email, String role, String provider, 
-                       boolean isNewUser, boolean emailVerified, String message) {
+    public AuthResponse(String token, String email, String role, String accountType) {
+        this(token, email, role);
+        this.accountType = accountType;
+    }
+
+    public AuthResponse(String token, String email, String role, String provider,
+                        boolean isNewUser, boolean emailVerified, String message) {
         this.token = token;
         this.email = email;
         this.role = role;
@@ -62,6 +68,14 @@ public class AuthResponse {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
     }
 
     public String getProvider() {

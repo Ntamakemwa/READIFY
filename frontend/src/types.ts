@@ -25,6 +25,9 @@ export interface Book {
 
 export interface LoginResponse {
   token: string;
+  email?: string;
+  role?: string;
+  accountType?: string;
   user?: Record<string, unknown>;
 }
 

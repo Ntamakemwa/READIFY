@@ -41,10 +41,14 @@ public class User {
     @Column(nullable = false)
     private UserRole role = UserRole.ROLE_MEMBER;
 
+    @Enumerated(EnumType.STRING)
+    @Column(length = 30)
+    private AccountType accountType = AccountType.READER;
+
     @Column(nullable = false, updatable = false)
     private Instant createdAt = Instant.now();
 
-        @Column(unique = true)
+    @Column(unique = true)
     private String googleId;
 
     @Column
@@ -126,6 +130,14 @@ public class User {
 
     public void setRole(UserRole role) {
         this.role = role;
+    }
+
+    public AccountType getAccountType() {
+        return accountType == null ? AccountType.READER : accountType;
+    }
+
+    public void setAccountType(AccountType accountType) {
+        this.accountType = accountType;
     }
 
     public Instant getCreatedAt() {

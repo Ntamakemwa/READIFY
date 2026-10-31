@@ -5,7 +5,14 @@ import type { LoginResponse } from '../types';
 import './Login.css';
 
 type Tab = 'signin' | 'register';
+type AccountType = 'READER' | 'SCHOOL_LIBRARY' | 'PRIVATE_LIBRARY';
 type Notice = { type: 'error' | 'success'; message: string } | null;
+
+const ACCOUNT_TYPES: { value: AccountType; icon: string; title: string; text: string }[] = [
+  { value: 'READER', icon: '📖', title: 'Reader', text: 'Browse and borrow books.' },
+  { value: 'SCHOOL_LIBRARY', icon: '🏫', title: 'School library', text: 'Lend books to students. No selling.' },
+  { value: 'PRIVATE_LIBRARY', icon: '🏛️', title: 'Private library', text: 'Lend and sell books.' },
+];
 
 function errorMessage(err: unknown, fallback: string) {
   if (err instanceof TypeError) return 'Could not connect to the server. Please try again.';
@@ -59,7 +66,13 @@ export default function Login() {
   const [notice, setNotice] = useState<Notice>(null);
   const [loading, setLoading] = useState(false);
   const [signin, setSignin] = useState({ email: '', password: '' });
-  const [reg, setReg] = useState({ fullName: '', email: '', password: '', confirm: '' });
+  const [reg, setReg] = useState({
+    fullName: '',
+    email: '',
+    password: '',
+    confirm: '',
+    accountType: 'READER' as AccountType,
+  });
 
   function switchTab(t: Tab) {
     setTab(t);
@@ -79,8 +92,13 @@ export default function Login() {
         method: 'POST',
         body: JSON.stringify({ email, password: signin.password }),
       });
+      const user = data.user ?? {
+        email: data.email ?? email,
+        role: data.role,
+        accountType: data.accountType,
+      };
       localStorage.setItem('token', data.token);
-      localStorage.setItem('user', JSON.stringify(data.user ?? {}));
+      localStorage.setItem('user', JSON.stringify(user));
       navigate('/');
     } catch (err) {
       setNotice({ type: 'error', message: errorMessage(err, 'Invalid email or password.') });
@@ -107,7 +125,12 @@ export default function Login() {
     try {
       await api('/auth/register', {
         method: 'POST',
-        body: JSON.stringify({ fullName, email, password: reg.password }),
+        body: JSON.stringify({
+          fullName,
+          email,
+          password: reg.password,
+          accountType: reg.accountType,
+        }),
       });
       setNotice({
         type: 'success',
@@ -174,8 +197,25 @@ export default function Login() {
             ) : (
                 <form className="auth-panel" onSubmit={handleRegister}>
                   <h2>Join Readify</h2>
-                  <p className="auth-subtitle">Free forever. Start borrowing books today.</p>
+                  <p className="auth-subtitle">Free forever. Choose the account that fits you.</p>
                   {alertBox}
+
+                  <div className="form-group">
+                    <span className="form-label">I am a…</span>
+                    <div className="account-types">
+                      {ACCOUNT_TYPES.map((t) => (
+                          <label key={t.value}
+                                 className={`account-type ${reg.accountType === t.value ? 'selected' : ''}`}>
+                            <input type="radio" name="accountType" value={t.value}
+                                   checked={reg.accountType === t.value}
+                                   onChange={() => setReg({ ...reg, accountType: t.value })} />
+                            <span className="account-type-icon">{t.icon}</span>
+                            <span className="account-type-title">{t.title}</span>
+                            <span className="account-type-text">{t.text}</span>
+                          </label>
+                      ))}
+                    </div>
+                  </div>
 
                   <div className="form-group">
                     <label className="form-label" htmlFor="registerName">Full name</label>
