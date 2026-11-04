@@ -1,7 +1,7 @@
 package com.readify.oauth2;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.readify.auth.dto.AuthResponse;
+import com.readify.dto.AuthResponse;
 import com.readify.entity.AuthProvider;
 import com.readify.entity.User;
 import com.readify.entity.UserRole;

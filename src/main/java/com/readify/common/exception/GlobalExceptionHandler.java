@@ -1,6 +1,6 @@
 package com.readify.common.exception;
 
-import com.readify.common.dto.ErrorResponse;
+import com.readify.dto.ErrorResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
