@@ -2,9 +2,9 @@ package com.readify.oauth2;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.readify.auth.dto.AuthResponse;
-import com.readify.auth.entity.AuthProvider;
-import com.readify.auth.entity.User;
-import com.readify.auth.entity.UserRole;
+import com.readify.entity.AuthProvider;
+import com.readify.entity.User;
+import com.readify.entity.UserRole;
 import com.readify.auth.repository.UserRepository;
 import com.readify.security.jwt.JwtTokenProvider;
 import com.readify.security.model.UserPrincipal;

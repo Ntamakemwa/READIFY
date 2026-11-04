@@ -1,6 +1,6 @@
 package com.readify.security;
 
-import com.readify.auth.entity.User;
+import com.readify.entity.User;
 import com.readify.auth.repository.UserRepository;
 import com.readify.security.model.UserPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;

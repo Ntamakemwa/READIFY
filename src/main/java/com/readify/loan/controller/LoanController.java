@@ -2,7 +2,7 @@ package com.readify.loan.controller;
 
 import com.readify.loan.dto.BorrowBookRequest;
 import com.readify.loan.dto.RenewLoanRequest;
-import com.readify.loan.entity.Loan;
+import com.readify.entity.Loan;
 import com.readify.loan.service.LoanService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

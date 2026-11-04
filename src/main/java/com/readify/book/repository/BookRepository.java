@@ -1,6 +1,6 @@
 package com.readify.book.repository;
 
-import com.readify.book.entity.Book;
+import com.readify.entity.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

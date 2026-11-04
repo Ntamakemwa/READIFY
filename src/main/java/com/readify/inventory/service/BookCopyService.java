@@ -1,12 +1,12 @@
 package com.readify.inventory.service;
 
-import com.readify.book.entity.Book;
+import com.readify.entity.Book;
 import com.readify.book.repository.BookRepository;
 import com.readify.common.enums.BookCopyStatus;
 import com.readify.common.exception.DuplicateResourceException;
 import com.readify.common.exception.ResourceNotFoundException;
 import com.readify.inventory.dto.BookCopyRequest;
-import com.readify.inventory.entity.BookCopy;
+import com.readify.entity.BookCopy;
 import com.readify.inventory.repository.BookCopyRepository;
 import org.springframework.stereotype.Service;
 

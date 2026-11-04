@@ -1,7 +1,7 @@
 package com.readify.author.service;
 
 import com.readify.author.dto.AuthorRequest;
-import com.readify.author.entity.Author;
+import com.readify.entity.Author;
 import com.readify.author.repository.AuthorRepository;
 import com.readify.common.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;

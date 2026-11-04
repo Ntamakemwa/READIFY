@@ -1,6 +1,6 @@
 package com.readify.oauth2;
 
-import com.readify.auth.entity.User;
+import com.readify.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;

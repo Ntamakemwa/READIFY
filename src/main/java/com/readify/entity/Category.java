@@ -1,4 +1,4 @@
-package com.readify.category.entity;
+package com.readify.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;

@@ -1,8 +1,8 @@
 package com.readify.inventory.repository;
 
-import com.readify.book.entity.Book;
+import com.readify.entity.Book;
 import com.readify.common.enums.BookCopyStatus;
-import com.readify.inventory.entity.BookCopy;
+import com.readify.entity.BookCopy;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

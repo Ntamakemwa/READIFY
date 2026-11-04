@@ -1,7 +1,7 @@
 package com.readify.loan.repository;
 
 import com.readify.common.enums.LoanStatus;
-import com.readify.loan.entity.Loan;
+import com.readify.entity.Loan;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.Instant;

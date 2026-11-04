@@ -1,8 +1,6 @@
-package com.readify.loan.entity;
+package com.readify.entity;
 
-import com.readify.auth.entity.User;
 import com.readify.common.enums.LoanStatus;
-import com.readify.inventory.entity.BookCopy;
 import jakarta.persistence.*;
 
 import java.time.Instant;

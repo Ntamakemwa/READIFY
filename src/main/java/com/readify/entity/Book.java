@@ -1,8 +1,6 @@
-package com.readify.book.entity;
+package com.readify.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.readify.author.entity.Author;
-import com.readify.category.entity.Category;
 import jakarta.persistence.*;
 
 @Entity

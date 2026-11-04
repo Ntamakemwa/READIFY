@@ -1,4 +1,4 @@
-package com.readify.auth.entity;
+package com.readify.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.readify.common.enums.UserStatus;

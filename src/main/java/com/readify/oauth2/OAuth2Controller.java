@@ -1,7 +1,7 @@
 package com.readify.oauth2;
 
 import com.readify.auth.dto.AuthResponse;
-import com.readify.auth.entity.User;
+import com.readify.entity.User;
 import com.readify.auth.repository.UserRepository;
 import com.readify.auth.service.EmailVerificationManagementService;
 import com.readify.common.exception.BusinessRuleException;
@@ -72,7 +72,7 @@ public class OAuth2Controller {
 
         user.setGoogleLinked(false);
         user.setGoogleId(null);
-        user.setProvider(com.readify.auth.entity.AuthProvider.LOCAL);
+        user.setProvider(com.readify.entity.AuthProvider.LOCAL);
         userRepository.save(user);
 
         return ResponseEntity.ok(Map.of(

@@ -1,6 +1,6 @@
 package com.readify.oauth2;
 
-import com.readify.auth.entity.User;
+import com.readify.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 

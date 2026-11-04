@@ -1,11 +1,11 @@
 package com.readify.book.service;
 
-import com.readify.author.entity.Author;
+import com.readify.entity.Author;
 import com.readify.author.repository.AuthorRepository;
 import com.readify.book.dto.BookRequest;
-import com.readify.book.entity.Book;
+import com.readify.entity.Book;
 import com.readify.book.repository.BookRepository;
-import com.readify.category.entity.Category;
+import com.readify.entity.Category;
 import com.readify.category.repository.CategoryRepository;
 import com.readify.common.enums.BookCopyStatus;
 import com.readify.common.exception.DuplicateResourceException;

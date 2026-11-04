@@ -1,7 +1,7 @@
 package com.readify.category.controller;
 
 import com.readify.category.dto.CategoryRequest;
-import com.readify.category.entity.Category;
+import com.readify.entity.Category;
 import com.readify.category.service.CategoryService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

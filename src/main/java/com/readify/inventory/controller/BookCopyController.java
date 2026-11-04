@@ -2,7 +2,7 @@ package com.readify.inventory.controller;
 
 import com.readify.inventory.dto.BookCopyRequest;
 import com.readify.inventory.dto.BookCopyStatusUpdateRequest;
-import com.readify.inventory.entity.BookCopy;
+import com.readify.entity.BookCopy;
 import com.readify.inventory.service.BookCopyService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,5 @@
-package com.readify.inventory.entity;
+package com.readify.entity;
 
-import com.readify.book.entity.Book;
 import com.readify.common.enums.BookCopyStatus;
 import jakarta.persistence.*;
 

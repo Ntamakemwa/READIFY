@@ -1,4 +1,4 @@
-package com.readify.auth.entity;
+package com.readify.entity;
 
 public enum UserRole {
     ROLE_MEMBER,

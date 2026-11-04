@@ -1,6 +1,6 @@
 package com.readify.auth.dto;
 
-import com.readify.auth.entity.UserRole;
+import com.readify.entity.UserRole;
 import jakarta.validation.constraints.NotNull;
 
 public class UpdateUserRoleRequest {

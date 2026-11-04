@@ -1,7 +1,7 @@
 package com.readify.book.controller;
 
 import com.readify.book.dto.BookRequest;
-import com.readify.book.entity.Book;
+import com.readify.entity.Book;
 import com.readify.book.service.BookService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

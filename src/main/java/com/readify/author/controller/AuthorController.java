@@ -1,7 +1,7 @@
 package com.readify.author.controller;
 
 import com.readify.author.dto.AuthorRequest;
-import com.readify.author.entity.Author;
+import com.readify.entity.Author;
 import com.readify.author.service.AuthorService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
