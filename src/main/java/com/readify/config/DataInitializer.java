@@ -2,7 +2,7 @@ package com.readify.config;
 
 import com.readify.entity.User;
 import com.readify.entity.UserRole;
-import com.readify.auth.repository.UserRepository;
+import com.readify.repository.UserRepository;
 import com.readify.common.enums.UserStatus;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;

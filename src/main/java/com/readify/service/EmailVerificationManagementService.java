@@ -1,7 +1,7 @@
 package com.readify.service;
 
 import com.readify.entity.User;
-import com.readify.auth.repository.UserRepository;
+import com.readify.repository.UserRepository;
 import com.readify.common.exception.BusinessRuleException;
 import com.readify.common.exception.ResourceNotFoundException;
 import com.readify.oauth2.EmailVerificationService;

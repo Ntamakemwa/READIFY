@@ -1,16 +1,16 @@
 package com.readify.service;
 
 import com.readify.entity.Author;
-import com.readify.author.repository.AuthorRepository;
+import com.readify.repository.AuthorRepository;
 import com.readify.dto.BookRequest;
 import com.readify.entity.Book;
-import com.readify.book.repository.BookRepository;
+import com.readify.repository.BookRepository;
 import com.readify.entity.Category;
-import com.readify.category.repository.CategoryRepository;
+import com.readify.repository.CategoryRepository;
 import com.readify.common.enums.BookCopyStatus;
 import com.readify.common.exception.DuplicateResourceException;
 import com.readify.common.exception.ResourceNotFoundException;
-import com.readify.inventory.repository.BookCopyRepository;
+import com.readify.repository.BookCopyRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

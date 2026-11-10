@@ -2,7 +2,7 @@ package com.readify.service;
 
 import com.readify.entity.User;
 import com.readify.entity.UserRole;
-import com.readify.auth.repository.UserRepository;
+import com.readify.repository.UserRepository;
 import com.readify.common.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.readify.auth.repository;
+package com.readify.repository;
 
 import com.readify.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;

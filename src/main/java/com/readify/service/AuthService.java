@@ -6,7 +6,7 @@ import com.readify.dto.RegisterRequest;
 import com.readify.entity.AccountType;
 import com.readify.entity.User;
 import com.readify.entity.UserRole;
-import com.readify.auth.repository.UserRepository;
+import com.readify.repository.UserRepository;
 import com.readify.common.exception.DuplicateResourceException;
 import com.readify.common.exception.ResourceNotFoundException;
 import com.readify.security.jwt.JwtTokenProvider;

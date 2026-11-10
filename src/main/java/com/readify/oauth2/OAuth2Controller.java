@@ -2,7 +2,7 @@ package com.readify.oauth2;
 
 import com.readify.dto.AuthResponse;
 import com.readify.entity.User;
-import com.readify.auth.repository.UserRepository;
+import com.readify.repository.UserRepository;
 import com.readify.service.EmailVerificationManagementService;
 import com.readify.common.exception.BusinessRuleException;
 import com.readify.common.exception.ResourceNotFoundException;

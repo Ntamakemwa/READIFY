@@ -1,4 +1,4 @@
-package com.readify.loan.repository;
+package com.readify.repository;
 
 import com.readify.common.enums.LoanStatus;
 import com.readify.entity.Loan;

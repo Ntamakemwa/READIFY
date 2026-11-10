@@ -1,4 +1,4 @@
-package com.readify.book.repository;
+package com.readify.repository;
 
 import com.readify.entity.Book;
 import org.springframework.data.jpa.repository.JpaRepository;

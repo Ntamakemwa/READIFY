@@ -3,7 +3,7 @@ package com.readify.oauth2;
 import com.readify.entity.AuthProvider;
 import com.readify.entity.User;
 import com.readify.entity.UserRole;
-import com.readify.auth.repository.UserRepository;
+import com.readify.repository.UserRepository;
 import com.readify.common.exception.BusinessRuleException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -2,7 +2,7 @@ package com.readify.service;
 
 import com.readify.entity.User;
 import com.readify.entity.UserRole;
-import com.readify.auth.repository.UserRepository;
+import com.readify.repository.UserRepository;
 import com.readify.common.enums.BookCopyStatus;
 import com.readify.common.enums.LoanStatus;
 import com.readify.common.enums.UserStatus;
@@ -10,11 +10,11 @@ import com.readify.common.exception.BusinessRuleException;
 import com.readify.common.exception.ResourceNotFoundException;
 import com.readify.common.exception.UnauthorizedAccessException;
 import com.readify.entity.BookCopy;
-import com.readify.inventory.repository.BookCopyRepository;
+import com.readify.repository.BookCopyRepository;
 import com.readify.dto.BorrowBookRequest;
 import com.readify.dto.RenewLoanRequest;
 import com.readify.entity.Loan;
-import com.readify.loan.repository.LoanRepository;
+import com.readify.repository.LoanRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;

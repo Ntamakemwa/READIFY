@@ -2,7 +2,7 @@ package com.readify.service;
 
 import com.readify.dto.CategoryRequest;
 import com.readify.entity.Category;
-import com.readify.category.repository.CategoryRepository;
+import com.readify.repository.CategoryRepository;
 import com.readify.common.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
