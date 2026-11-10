@@ -1,4 +1,4 @@
-package com.readify;
+package com.readify.entity;
 
 public enum CopyPurpose {
     LEND,
