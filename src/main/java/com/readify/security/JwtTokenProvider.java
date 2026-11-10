@@ -1,4 +1,4 @@
-package com.readify.security.jwt;
+package com.readify.security;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;

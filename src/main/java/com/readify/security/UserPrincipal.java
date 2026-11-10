@@ -1,4 +1,4 @@
-package com.readify.security.model;
+package com.readify.security;
 
 import com.readify.entity.User;
 import org.springframework.security.core.GrantedAuthority;

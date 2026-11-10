@@ -1,6 +1,5 @@
 package com.readify.security;
 
-import com.readify.security.jwt.JwtTokenProvider;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

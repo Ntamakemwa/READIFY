@@ -2,7 +2,6 @@ package com.readify.security;
 
 import com.readify.entity.User;
 import com.readify.repository.UserRepository;
-import com.readify.security.model.UserPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

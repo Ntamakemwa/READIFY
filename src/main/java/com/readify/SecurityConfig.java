@@ -2,7 +2,7 @@ package com.readify;
 
 import com.readify.security.CustomUserDetailsService;
 import com.readify.security.JwtAuthenticationFilter;
-import com.readify.security.jwt.JwtTokenProvider;
+import com.readify.security.JwtTokenProvider;
 import com.readify.oauth2.CustomOAuth2UserService;
 import com.readify.oauth2.OAuth2AuthenticationSuccessHandler;
 import com.readify.oauth2.OAuth2AuthenticationFailureHandler;

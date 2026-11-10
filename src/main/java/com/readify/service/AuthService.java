@@ -9,7 +9,7 @@ import com.readify.entity.UserRole;
 import com.readify.repository.UserRepository;
 import com.readify.common.exception.DuplicateResourceException;
 import com.readify.common.exception.ResourceNotFoundException;
-import com.readify.security.jwt.JwtTokenProvider;
+import com.readify.security.JwtTokenProvider;
 import jakarta.validation.Valid;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
